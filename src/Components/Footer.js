@@ -3,10 +3,13 @@ import Paper from '@material-ui/core/Paper';
 import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 
-export default ({ muscles})=>
-<Paper square>
+export default ({ muscles, category, onSelect})=> {
+  const index = category
+
+  return <Paper square>
       <Tabs
         value={0}
+        onChange
         indicatorColor="primary"
         textColor="primary"
         centered
@@ -17,3 +20,4 @@ export default ({ muscles})=>
         )}
       </Tabs>
     </Paper>
+}
